@@ -1,5 +1,5 @@
 #.flake8
 [flake8]
-ignore = D203
+ignore = ANN101
 exclude = .git,__pycache__,docs/source/conf.py,old,build,dist
 max-complexity = 10

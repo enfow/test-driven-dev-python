@@ -6,7 +6,7 @@ format:
 	isort .
 
 lint:
-	env PYTHONPATH=. pytest --flake8 --pylint --mypy
+	env PYTHONPATH=. pytest --ignore ./tests/ --flake8 --pylint --mypy
 
 utest:
 	env PYTHONPATH=. pytest ./tests/ -s --verbose
