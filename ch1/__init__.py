@@ -1,1 +1,1 @@
-"""Initialize."""
+"""Initializer."""
