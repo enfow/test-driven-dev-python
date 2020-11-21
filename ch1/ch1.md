@@ -19,6 +19,18 @@ class Dollar:
 
 ```
 
+### test
+
+```python
+class TestDollar:
+    """Test Dollar"""
+    def test_multiplication(self):
+        """test code"""
+        five = Dollar(5)
+        five.times(2)
+        assert 10 == five.amount
+```
+
 #### result
 
 ```bash
@@ -51,6 +63,18 @@ class Dollar:
         pass
 ```
 
+#### test
+
+```python
+class TestDollar:
+    """Test Dollar"""
+    def test_multiplication(self):
+        """test code"""
+        five = Dollar(5)
+        five.times(2)
+        assert 10 == five.amount
+```
+
 #### result
 
 ```bash
@@ -73,6 +97,18 @@ class Dollar:
 
     def times(self, multiplier: int):
         self.amount = self.amount * multiplier
+```
+
+#### test
+
+```python
+class TestDollar:
+    """Test Dollar"""
+    def test_multiplication(self):
+        """test code"""
+        five = Dollar(5)
+        five.times(2)
+        assert 10 == five.amount
 ```
 
 #### result
