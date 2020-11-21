@@ -1,10 +1,18 @@
 # test-driven-dev-python
-Test-Driven Development: By Example, Kent Beck
 
-## 테스트 주기
+- Summary of the Bible **Test-Driven Development: By Example, Kent Beck**
+
+## 테스트 주기(ch1, 47p)
 
 1. 작은 테스트를 하나 추가한다.
 2. 모든 테스트를 실행해서 테스트가 실패하는 것을 확인한다.
 3. 조금 수정한다.
 4. 모든 테스트를 실행해서 테스트가 성공하는 것을 확인한다.
 5. 중복을 제거하기 위해 리펙토링한다.
+
+## 조금 수정하기 = 최대한 빨리 초록색 보기(ch2, 56p)
+
+- 가짜로 구현하기: 상수를 반환하게 만들고 진짜 코드를 얻을 때까지 단계적으로 상수를 바꾸어 나간다.
+- 명백한 구현 사용하기: 실제 구현을 입력한다.
+
+나(Kent Beck)는 보통 실무에서 TDD를 사용할 때 두 방법을 번갈아가며 사용한다.
