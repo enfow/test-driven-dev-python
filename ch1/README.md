@@ -1,8 +1,20 @@
-# Ch1
+# Ch1 다중 통화를 지원하는 Money 객체
 
 ## Trial 1
 
-- 클래스 정의
+- 가장 처음으로 통과해야 할 것은 test에서 요구하는 Interface를 갖춘 class를 정의하는 것이다.
+
+### test
+
+```python
+class TestDollar:
+    """Test Dollar"""
+    def test_multiplication(self):
+        """test code"""
+        five = Dollar(5)
+        five.times(2)
+        assert 10 == five.amount
+```
 
 #### code
 
@@ -17,18 +29,6 @@ class Dollar:
     def times(self, multiplier: int) -> None:
         pass
 
-```
-
-### test
-
-```python
-class TestDollar:
-    """Test Dollar"""
-    def test_multiplication(self):
-        """test code"""
-        five = Dollar(5)
-        five.times(2)
-        assert 10 == five.amount
 ```
 
 #### result
@@ -47,7 +47,7 @@ E         -5
 
 ## Trial 2
 
-- `assert` 간단하게 통과하기
+- Interface를 정의하였다면 첫 번째 `assert` 문인 `assert 10 == five.amount`를 통과하도록 한다.
 
 #### code 
 
@@ -60,19 +60,7 @@ class Dollar:
         self.amount = amount
 
     def times(self, multiplier: int) -> None:
-        pass
-```
-
-#### test
-
-```python
-class TestDollar:
-    """Test Dollar"""
-    def test_multiplication(self):
-        """test code"""
-        five = Dollar(5)
-        five.times(2)
-        assert 10 == five.amount
+        self.amount = 5 * 2
 ```
 
 #### result
@@ -83,7 +71,9 @@ tests/test_ch1.py::TestDollar::test_multiplication PASSED
 
 ## Trial 3
 
-- 중복 제거
+- 위의 예시에서 `times()` method에서 사용되는 `5 * 2` 중 5는 amount attribute, 2는 multiplier parameter 값이기도 하다.
+- 중복을 줄여주는 차원에서 다음과 같이 대체가 가능하다.
+- test도 마찬가지로 통과한다.
 
 #### code 
 
@@ -97,18 +87,6 @@ class Dollar:
 
     def times(self, multiplier: int) -> None:
         self.amount = self.amount * multiplier
-```
-
-#### test
-
-```python
-class TestDollar:
-    """Test Dollar"""
-    def test_multiplication(self):
-        """test code"""
-        five = Dollar(5)
-        five.times(2)
-        assert 10 == five.amount
 ```
 
 #### result
