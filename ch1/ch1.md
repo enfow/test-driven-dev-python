@@ -10,11 +10,11 @@
 class Dollar:
     """Define Dollar Class."""
 
-    def __init__(self, amount:int):
+    def __init__(self, amount:int) -> None:
         """initialize."""
         self.amount = amount
 
-    def times(self, multiplier: int):
+    def times(self, multiplier: int) -> None:
         pass
 
 ```
@@ -55,11 +55,11 @@ E         -5
 class Dollar:
     """Define Dollar Class."""
 
-    def __init__(self, amount:int):
+    def __init__(self, amount:int) -> None:
         """initialize."""
         self.amount = amount
 
-    def times(self, multiplier: int):
+    def times(self, multiplier: int) -> None:
         pass
 ```
 
@@ -91,11 +91,11 @@ tests/test_ch1.py::TestDollar::test_multiplication PASSED
 class Dollar:
     """Define Dollar Class."""
 
-    def __init__(self, amount:int):
+    def __init__(self, amount:int) -> None:
         """initialize."""
         self.amount = amount 
 
-    def times(self, multiplier: int):
+    def times(self, multiplier: int) -> None:
         self.amount = self.amount * multiplier
 ```
 
