@@ -70,7 +70,7 @@ class Dollar(Money):
 
     def equals(self, inp: Dollar) -> bool:
         """equal."""
-        return self.amount == inp.amount
+        return self == inp
 
 # franc.py
 class Franc(Money):
@@ -91,7 +91,7 @@ class Franc(Money):
 
     def equals(self, inp: Franc) -> bool:
         """equal."""
-        return self.amount == inp.amount
+        return self == inp
 ```
 
 #### result
@@ -128,7 +128,7 @@ class Money:
 
     def equals(self, inp: Money) -> bool:
         """equal."""
-        return self.amount == inp.amount
+        return self == inp
 
 # dollar.py
 class Dollar(Money):

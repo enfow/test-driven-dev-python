@@ -50,15 +50,15 @@ class Dollar:
 
     def __init__(self, amount: int) -> None:
         """initialize."""
-        self.__amount = amount
+        self.amount = amount
 
     def times(self, multiplier: int) -> object:
         """multiplication."""
-        return Dollar(self.__amount * multiplier)
+        return Dollar(self.amount * multiplier)
 
     def equals(self, inp: object) -> bool:
         """equal."""
-        return self.__amount == inp.__amount
+        return self == inp
 ```
 
 #### result
@@ -102,19 +102,19 @@ class Dollar:
 
     def __init__(self, amount: int) -> None:
         """initialize."""
-        self.__amount = amount
+        self.amount = amount
 
     def __eq__(self, inp: Dollar) -> bool:
         """Define what is equal instance."""
-        return self.__amount == inp.__amount
+        return self.amount == inp.amount
 
     def times(self, multiplier: int) -> Dollar:
         """multiplication."""
-        return Dollar(self.__amount * multiplier)
+        return Dollar(self.amount * multiplier)
 
     def equals(self, inp: Dollar) -> bool:
         """equal."""
-        return self.__amount == inp.__amount
+        return self == inp
 
 ```
 
