@@ -8,7 +8,7 @@
 
 #### test
 
-- `Dollar`에 적용된 test code에서 class 이름만 바꾸어 test code를 작성한다.
+- `Dollar`에 적용된 test code에서 class 이름만 바꾸어 `Franc`의 test code를 작성한다.
 
 ```python
 class TestFranc:
