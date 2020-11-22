@@ -18,4 +18,4 @@ class Money:
 
     def equals(self, inp: Money) -> bool:
         """equal."""
-        return self.amount == inp.amount
+        return self == inp

@@ -8,7 +8,7 @@ class Dollar:
 
     def __init__(self, amount: int) -> None:
         """initialize."""
-        self.__amount = amount
+        self.amount = amount
 
     # [Fix for Lint] Incompatible overrides
     # https://mypy.readthedocs.io/en/stable/common_issues.html#incompatible-overrides
@@ -16,12 +16,12 @@ class Dollar:
         """Define what is equal instance."""
         # If amount attribute is same, it is same instance.
         # pylint disable because access to private attribute of `inp`
-        return self.__amount == inp.__amount  # pylint: disable=W0212
+        return self.amount == inp.amount
 
     def times(self, multiplier: int) -> Dollar:
         """multiplication."""
-        return Dollar(self.__amount * multiplier)
+        return Dollar(self.amount * multiplier)
 
     def equals(self, inp: Dollar) -> bool:
         """equal."""
-        return self.__amount == inp.__amount  # pylint: disable=W0212
+        return self == inp

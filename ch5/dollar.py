@@ -23,4 +23,4 @@ class Dollar:
 
     def equals(self, inp: Dollar) -> bool:
         """equal."""
-        return self.amount == inp.amount
+        return self == inp
