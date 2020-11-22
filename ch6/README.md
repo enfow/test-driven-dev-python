@@ -62,9 +62,7 @@ class Dollar(Money):
 
     def __eq__(self, inp: Dollar) -> bool:
         """Define what is equal instance."""
-        if isinstance(inp, Dollar):
-            return self.amount == inp.amount
-        return False
+        return self.amount == inp.amount
 
     def times(self, multiplier: int) -> Dollar:
         """multiplication."""
@@ -85,9 +83,7 @@ class Franc(Money):
 
     def __eq__(self, inp: Franc) -> bool:
         """Define what is equal instance."""
-        if isinstance(inp, Franc):
-            return self.amount == inp.amount
-        return False
+        return self.amount == inp.amount
 
     def times(self, multiplier: int) -> Franc:
         """multiplication."""
@@ -128,9 +124,7 @@ class Money:
 
     def __eq__(self, inp: Money) -> bool:
         """Define what is equal instance."""
-        if isinstance(inp, Money):
-            return self.amount == inp.amount
-        return False
+        return self.amount == inp.amount
 
     def equals(self, inp: Money) -> bool:
         """equal."""

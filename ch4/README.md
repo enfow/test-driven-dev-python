@@ -106,10 +106,7 @@ class Dollar:
 
     def __eq__(self, inp: Dollar) -> bool:
         """Define what is equal instance."""
-        if isinstance(inp, Dollar):
-            # If amount attribute is same, it is same instance.
-            return self.__amount == inp.__amount
-        return False
+        return self.__amount == inp.__amount
 
     def times(self, multiplier: int) -> Dollar:
         """multiplication."""

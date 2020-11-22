@@ -51,10 +51,7 @@ class Franc:
 
     def __eq__(self, inp: Franc) -> bool:
         """Define what is equal instance."""
-        if isinstance(inp, Franc):
-            # If amount attribute is same, it is same instance.
-            return self.amount == inp.amount
-        return False
+        return self.amount == inp.amount
 
     def times(self, multiplier: int) -> Franc:
         """multiplication."""

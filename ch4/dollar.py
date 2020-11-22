@@ -14,11 +14,9 @@ class Dollar:
     # https://mypy.readthedocs.io/en/stable/common_issues.html#incompatible-overrides
     def __eq__(self, inp: Dollar) -> bool:  # type: ignore[override]
         """Define what is equal instance."""
-        if isinstance(inp, Dollar):
-            # If amount attribute is same, it is same instance.
-            # pylint disable because access to private attribute of `inp`
-            return self.__amount == inp.__amount  # pylint: disable=W0212
-        return False
+        # If amount attribute is same, it is same instance.
+        # pylint disable because access to private attribute of `inp`
+        return self.__amount == inp.__amount  # pylint: disable=W0212
 
     def times(self, multiplier: int) -> Dollar:
         """multiplication."""
