@@ -1,4 +1,4 @@
-# Ch7 객체 만들기
+# Ch8 객체 만들기
 
 - (ch7에서 계속) `Money` Class로 구현을 많이 이동하다보니 `Dollar`와 `Franc`에서 하는 일이 많이 없어졌다. `times()` Method도 `Money` Class로 옮겨 중복을 한 번 더 제거할 수 있을 것이다.
 - 이렇게 되면 Child Class를 제거할 수도 있어 보인다.
