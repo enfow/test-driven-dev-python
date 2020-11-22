@@ -50,15 +50,15 @@ class Dollar:
 
     def __init__(self, amount: int) -> None:
         """initialize."""
-        self.amount = amount
+        self.__amount = amount
 
     def times(self, multiplier: int) -> object:
         """multiplication."""
-        return Dollar(self.amount * multiplier)
+        return Dollar(self.__amount * multiplier)
 
     def equals(self, inp: object) -> bool:
         """equal."""
-        return self.amount == inp.amount
+        return self.__amount == inp.__amount
 ```
 
 #### result
@@ -102,21 +102,23 @@ class Dollar:
 
     def __init__(self, amount: int) -> None:
         """initialize."""
-        self.amount = amount
+        self.__amount = amount
 
-    def __eq__(self, other):
-        if (isinstance(other, Dollar)):
+    def __eq__(self, inp: Dollar) -> bool:
+        """Define what is equal instance."""
+        if isinstance(inp, Dollar):
             # If amount attribute is same, it is same instance.
-            return self.amount == other.amount
+            return self.__amount == inp.__amount
         return False
 
     def times(self, multiplier: int) -> Dollar:
         """multiplication."""
-        return Dollar(self.amount * multiplier)
+        return Dollar(self.__amount * multiplier)
 
     def equals(self, inp: Dollar) -> bool:
         """equal."""
-        return self.amount == inp.amount
+        return self.__amount == inp.__amount
+
 ```
 
 #### result
