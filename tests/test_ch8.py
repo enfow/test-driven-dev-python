@@ -1,8 +1,6 @@
 """Test codes."""
 
 from ch8.money import Money
-from ch8.dollar import Dollar
-from ch8.franc import Franc
 
 
 class TestMoney:
