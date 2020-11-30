@@ -57,6 +57,7 @@ class Bank:
         """Reduce `money` param to `currency` param."""
         return inp.reduce(currency)
 
+
 class Sum:
     """Define Sum Clsss."""
 

@@ -28,7 +28,7 @@ class Money:
         """plus."""
         return Sum(self, addend)
 
-    def reduce(self: "Money", bank:"Bank", currency: str) -> "Money":
+    def reduce(self: "Money", bank: "Bank", currency: str) -> "Money":
         """reduce."""
         rate = bank.rate(self.currency, currency)
         return Money(self.amount / rate, currency)
@@ -67,6 +67,7 @@ class Bank:
         if in_currency == out_currency:
             return 1
         return self.rates[(in_currency, out_currency)]
+
 
 class Sum:
     """Define Sum Clsss."""
