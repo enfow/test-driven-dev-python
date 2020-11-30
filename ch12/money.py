@@ -48,7 +48,7 @@ class Money:
 
 class Bank:
     """Define Bank Class."""
-    
-    def reduce(self: "Bank", money: "Money", currency: str):
+
+    def reduce(self: "Bank", money: "Money", currency: str) -> "Money":
         """reduce `money` param to `currency` param."""
         return Money(10, "USD")

@@ -1,6 +1,6 @@
 """Test codes."""
 
-from ch12.money import Money, Bank
+from ch12.money import Bank, Money
 
 
 class TestMoney:
@@ -28,7 +28,7 @@ class TestMoney:
 
     def test_simple_addition(self):
         summation = Money.dollar(5).plus(Money.dollar(5))
-        
+
         bank = Bank()
         reduced = bank.reduce(summation, "USD")
         assert Money.dollar(10) == reduced
